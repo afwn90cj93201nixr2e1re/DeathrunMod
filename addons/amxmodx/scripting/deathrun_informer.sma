@@ -185,7 +185,7 @@ public Task_ShowInfo()
             #endif
             
             get_user_name(id, szName, charsmax(szName));
-            for(new player = 1; player < g_iMaxPlayers; player++) {
+            for(new player = 1; player <= g_iMaxPlayers; player++) {
                 if(g_bSpecList[player] && bShowInfo[player]) {
                     formatex(szSpecInfo, charsmax(szSpecInfo), "%L^n", player, "DRI_SPECLIST", szName, g_iHealth[id], g_iMoney[id], g_iPlayerFps[id]);
                     
